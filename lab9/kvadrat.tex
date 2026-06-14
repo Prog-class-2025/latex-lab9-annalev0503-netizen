@@ -1,32 +1,32 @@
-\documentclass[12pt]{article} % Клас документа, шрифт 12pt
+\documentclass[12pt]{article}
 
-\usepackage[utf8]{inputenc} % UTF-8 кодування
-\usepackage[T2A]{fontenc} % Шрифти кирилиці
-\usepackage[ukrainian]{babel} % Українська мова
-\usepackage{geometry} % Поля сторінки
-\geometry{a4paper, margin=2cm} % Формат A4, поля 2 см
+\usepackage[utf8]{inputenc}
+\usepackage[T2A]{fontenc}
+\usepackage[ukrainian]{babel}
+\usepackage{geometry}
+\geometry{a4paper, margin=2cm}
 
-\usepackage{xcolor} % Кольори
-\usepackage{tcolorbox} % Кольорові рамки
-\usepackage{graphicx} % Зображення
-\usepackage{amsmath, amsthm, amssymb} % Математика, теореми, символи
+\usepackage{xcolor}
+\usepackage{tcolorbox}
+\usepackage{graphicx}
+\usepackage{amsmath, amsthm, amssymb}
 
-\usepackage{caption} % Підписи до рисунків
-\captionsetup{labelsep=period} % Роздільник у підписах "Рис. 1."
+\usepackage{caption}
+\captionsetup{labelsep=period}
 
-\newtheorem{theorem}{Теорема} % Середовище для теорем
+\newtheorem{theorem}{Теорема}
 
-\usepackage{fancyhdr} % Колонтитули
-\pagestyle{fancy} % Використання fancyhdr
-\fancyhf{} % Очищення стандартних колонтитулів
-\setlength{\headheight}{15pt} % Висота верхнього колонтитулу
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\setlength{\headheight}{15pt}
 
-\newcommand{\student}{Введіть прізвище та ім'я} % ПІБ студента
-\newcommand{\labdate}{\today} % Дата
+\newcommand{\student}{Левченко Анна}
+\newcommand{\labdate}{\today}
 
-\fancyhead[L]{\student} % Лівий верхній колонтитул
-\fancyhead[R]{\labdate} % Правий верхній колонтитул
-\fancyfoot[C]{\thepage} % Нижній колонтитул — номер сторінки
+\fancyhead[L]{\student}
+\fancyhead[R]{\labdate}
+\fancyfoot[C]{\thepage}
 
 \begin{document}
 
@@ -36,37 +36,68 @@
 \end{center}
 
 \section*{Мета роботи}
-\textit{навчитися вводити математичні формули та структурувати документ, використовувати кольорові рамки для визначень, теорем та прикладів, а також вставляти зображення}.
+\textit{навчитися вводити математичні формули та структурувати документ,
+використовувати кольорові рамки для визначень, теорем та прикладів,
+а також вставляти зображення}.
 
 \section{Короткі теоретичні відомості}
 
-\begin{tcolorbox}[colback=blue!10!white, colframe=blue!80!black, title=Визначення]
-% Введіть визначення квадрата, змініть колір рамки
+\begin{tcolorbox}[colback=blue!10!white, colframe=red!80!white, title=Визначення]
+Квадратом називають прямокутник, у якого всі сторони рівні.
 \end{tcolorbox}
 
-% Введіть текст \\На рисунку ... дивись зразок. 
+На рисунку~\ref{fig:square} зображено квадрат $ABCD$. Прямокутник є
+паралелограмом, тому і квадрат~--- паралелограм, у якого всі сторони рівні,
+тобто він є і ромбом. Отже, квадрат має властивості прямокутника та ромба.
 
-%додати зображення, файл foto1.png 
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.3\textwidth]{foto1.png}
+    \caption{Квадрат $ABCD$}
+    \label{fig:square}
+\end{figure}
 
 \medskip
 \textit{Властивості квадрата:}
 \begin{enumerate}
     \item Усі кути квадрата прямі.
-   %Введіть властивості 2-6 за зразком
+    \item Периметр $P_{ABCD} = 4AB$.
+    \item Діагоналі квадрата між собою рівні (рис.~\ref{fig:square}).
+    \item Діагоналі квадрата взаємно перпендикулярні й точкою перетину
+          діляться навпіл (рис.~\ref{fig:diag}).
+    \item Діагоналі квадрата ділять його кути навпіл, тобто утворюють кути
+          $45^\circ$ зі сторонами квадрата (рис.~\ref{fig:diag}).
+    \item Точка перетину діагоналей квадрата рівновіддалена від усіх його
+          вершин: $AO = BO = CO = DO$.
 \end{enumerate}
 
-%додати зображення, файл foto2.png 
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.3\textwidth]{foto2.png}
+    \caption{Діагоналі квадрата}
+    \label{fig:diag}
+\end{figure}
+\newpage
 
 \begin{tcolorbox}[colback=green!5!white, colframe=green!75!black, title=Приклад 1]
-% Введіть текст прикладу за зразком
+Точки $K$ і $M$ належать відповідно діагоналям $BD$ і $AC$ квадрата $ABCD$,
+причому $AM = \dfrac{1}{4}AC$, $BK = \dfrac{1}{4}BD$.
+Доведіть, що $\triangle ADM = \triangle BAK$ (рис.~\ref{fig:example}).
 \end{tcolorbox}
 
-%додати зображення, файл foto3.png 
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.3\textwidth]{foto3.png}
+    \caption{Ілюстрація до прикладу}
+    \label{fig:example}
+\end{figure}
 
 \begin{proof}
 \begin{enumerate}
     \item $\angle MAD = \angle ABK = 45^\circ$, а $AD = AB$ як сторони квадрата.
-   % Введіть текст доведення 2,3 
+    \item Оскільки $AC = BD$ як діагоналі квадрата і
+          $AM = \dfrac{1}{4}AC$, $BK = \dfrac{1}{4}BD$, то $AM = BK$.
+    \item Отже, $\triangle AMD = \triangle BKA$ за двома сторонами та кутом між ними.
 \end{enumerate}
 \end{proof}
 
@@ -74,12 +105,20 @@
 
 \begin{tcolorbox}[colback=blue!5!white, colframe=blue!75!black, title=Ознаки квадрата]
 \begin{theorem}
-% Введіть текст ознаки квадрата 1) 2)
+\textit{1) Якщо діагоналі прямокутника взаємно перпендикулярні, то він є
+квадратом.} \\
+\textit{2) Якщо діагоналі ромба між собою рівні, то він є квадратом.}
 \end{theorem}
 \end{tcolorbox}
 
 \begin{proof}
-%Введіть текст доведення використовуючи зразок
+1) Прямокутник є паралелограмом, а паралелограм із взаємно перпендикулярними
+діагоналями є ромбом. Отже, у заданого прямокутника всі сторони рівні,
+а тому він є квадратом.
+
+2) Ромб є паралелограмом, а паралелограм з рівними діагоналями є
+прямокутником. Отже, у розглянутому ромбі всі кути прямі, а тому він є
+квадратом.
 \end{proof}
 
 \section*{Контрольні запитання}
